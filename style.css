@@ -4,7 +4,8 @@
   --attrImg-border-gray: rgb(65, 64, 62);
 }
 .header {
-  background-image: url(https://live.staticflickr.com/4611/40545139922_01026c8f7f_b.jpg);
+  /* background-image: url(https://live.staticflickr.com/4611/40545139922_01026c8f7f_b.jpg); */
+  background-color: #000000;
   padding-bottom: 2px;
 }
 
