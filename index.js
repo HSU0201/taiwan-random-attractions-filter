@@ -95,8 +95,9 @@ $.getJSON(url, function (elem) {
     let template = `
     <div class="attrBackground">11111
       <div class="attrInfo">
+      <div class="btn btn-danger attrInfoBtn">X</div>
         <div class="infoTop row">
-          <div class="btn btn-danger attrInfoBtn">Close</div>
+          
           <div class="attrMainImg col-md-5">
             <div class="attrImg">
               <img
@@ -108,7 +109,7 @@ $.getJSON(url, function (elem) {
               >
             </div>
           </div>
-
+          
           <div class="attrMainInfo col-md-5">
             <div>
               <span class="attrName">${name}</span>
@@ -130,6 +131,7 @@ $.getJSON(url, function (elem) {
               </div>
             </div>
           </div>
+          
         </div>
         <div class="attrDescription">
           ${description}

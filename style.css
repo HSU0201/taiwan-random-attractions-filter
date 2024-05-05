@@ -1,5 +1,5 @@
 :root {
-  --attrCard-color-yellow: #eda603;
+  --attrCard-color-yellow: #eac46c;
   --attrCardInfo-color-yellow: #e6d5b8;
   --attrImg-border-gray: #989898;
 }
@@ -11,24 +11,27 @@
   align-items: center;
   position: sticky;
   top: 50px;
-  left:10px;
+  left: 10px;
   height: 80px;
   width: 80px;
   background: linear-gradient(to bottom, #b0302c 17%, #cf7f06 100%);
   color: white;
   cursor: pointer;
   text-align: center;
+
   i {
     font-size: 2rem;
   }
+
   .btn {
     font-size: 1.5rem;
-    color: #000000;
+    color: #ffffff;
     background-color: var(--attrCard-color-yellow);
     padding: 10px;
     margin-bottom: 20px;
   }
 }
+
 .attrCardContainer {
   justify-content: space-around;
   gap: 5px;
@@ -44,7 +47,7 @@
     width: 15rem;
     border-radius: 10px;
     overflow: hidden;
-    margin-block:20px;
+    margin-block: 20px;
 
     .attrCardImgTop {
       width: 100%;
@@ -60,33 +63,38 @@
         position: absolute;
         left: 0;
         bottom: 45px;
-        color: rgb(93, 15, 15);
+        color: rgb(48, 10, 10);
         font-size: 20px;
         font-style: italic;
         font-family: "Montserrat", sans-serif;
         margin: 0;
         background-color: #feffff6e;
       }
+
       .attrCardContent {
         display: flex;
         justify-content: space-between;
         margin: 2rem 1rem 1rem;
+
         .attrCardText {
           margin: 0;
           padding: 0;
         }
+
         a {
           color: rgba(255, 0, 0, 0.5);
         }
       }
     }
+
     .attrCardBody::before {
       /*利用偽元素植入數字與文字*/
-      content: attr(data-number); /*載入資料屬性*/
+      content: attr(data-number);
+      /*載入資料屬性*/
       position: absolute;
       top: 0;
       right: 10px;
-      -webkit-text-stroke: 0.5px #f30000;
+      -webkit-text-stroke: 0.5px #ad4402;
       text-shadow: 2px 2px 0 var(--attrCard-color-yellow);
       color: white;
       font-size: 26px;
@@ -94,13 +102,18 @@
       z-index: 1;
     }
   }
+
   .attrBackground {
     background-color: rgb(0, 0, 0);
     width: 100vw;
     height: 100vh;
+    color: white;
   }
+
   .attrInfo {
-    background-color: var(--attrCardInfo-color-yellow);
+    background: linear-gradient(to bottom, #b0302c 30%, #cf7f06 100%);
+    box-shadow: 2px 2px 5px #000000;
+
     position: fixed;
     left: 50%;
     top: 50%;
@@ -113,15 +126,18 @@
     z-index: 999;
     display: none;
   }
+
   .active {
     display: block;
   }
 }
+
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 .infoTop {
   display: flex;
   margin: 30px;
 }
+
 .attrMainInfo {
   margin-left: 2rem;
   flex: 1;
@@ -129,26 +145,27 @@
 
 .attrImg {
   position: relative;
+
   /* min-width: 15rem; */
   /* max-height: 10rem; */
   img {
     max-width: 100%;
     max-height: 100%;
   }
+
   span {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    background-image: linear-gradient(
-      rgba(0 0 0 / 0) 40%,
-      var(--attrCard-color-yellow) 30%
-    );
+    /* background-image: linear-gradient(rgba(0 0 0 / 0) 10%,
+        var(--attrCard-color-yellow) 80%); */
     font-size: 1.5rem;
     color: rgb(249, 249, 249);
     font-weight: 900;
     text-shadow: 1px 1px rgb(128, 126, 126);
   }
 }
+
 .attrMainImg {
   margin-bottom: 20px;
   align-items: center;
@@ -177,13 +194,14 @@
 } */
 .attrName {
   font-size: 3rem;
-  -webkit-text-stroke: 1px #82623f;
-  text-shadow: 2px 2px 0 #ffffff;
-  color: transparent;
+  /* -webkit-text-stroke: 3px #000000;
+  text-shadow: 2px 2px 0 #414040; */
+  color: rgb(255, 255, 255);
   font-style: italic;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
+
 .attrOpenTime,
 .attrTicketInfo,
 .attrTel,
@@ -193,22 +211,28 @@
   letter-spacing: 2px;
   text-indent: -5.6em;
   transform: translateX(15%);
+
   span {
     font-size: 1.2rem;
     font-weight: 900;
-    background-image: linear-gradient(
-      rgba(0 0 0 / 0) 40%,
-      var(--attrCard-color-yellow) 30%
-    );
+    /* background-image: linear-gradient(rgba(0 0 0 / 0) 40%,
+        var(--attrCard-color-yellow) 30%); */
   }
 }
+
 .attrInfoBtn {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-  position: sticky;
-  top: 10px;
+  /* position: sticky; */
+  position: absolute;
+  top: 30px;
+  right: 30px !important;
   z-index: 99;
+  width: 50px !important;
+  height: 40px !important;
+  text-align: center;
 }
+
 .attrRemarks {
   position: relative;
   padding: 1em;
@@ -218,6 +242,7 @@
   border-radius: 20px;
   margin: 20px;
 }
+
 .attrRemarks span {
   position: relative;
   z-index: 2;
@@ -236,11 +261,13 @@
   font-weight: 800;
   z-index: 1;
 }
+
 .attrDescription {
   font-weight: 800;
   margin: 10px;
   font-size: 24px;
 }
+
 .attrToldescribe {
   /* background: #fffdfd;
   padding: 10px;
@@ -259,6 +286,7 @@
   margin-right: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .attrToldescribe::before {
   content: "";
   position: absolute;
@@ -269,25 +297,27 @@
   border-style: solid;
   border-color: transparent #3498db transparent transparent;
 }
+
 .attrTravellinginfo {
   border: 2px solid var(--attrCard-color-yellow);
 
   padding: 10px;
   margin: 10px;
+
   span {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 2rem;
-    background-image: linear-gradient(
-      rgba(0 0 0 / 0) 40%,
-      var(--attrCard-color-yellow) 30%
-    );
+    background-image: linear-gradient(rgba(0 0 0 / 0) 10%,
+        var(--attrCard-color-yellow) 90%);
   }
+
   p {
-    color: #000000;
+    color: #ffffff;
     font-size: 1.5rem;
     margin: 20px;
   }
 }
+
 /* .del {
   display: none; 
 } */
