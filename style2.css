@@ -4,12 +4,12 @@
   justify-content: flex-end;
   max-height: 60vh;
   max-width: 1440px;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
   background-color: #ffffff;
-  border-radius: 50% 50% 50% 50% / 0% 0% 20% 20%;
+  /* border-radius: 50% 50% 50% 50% / 0% 0% 20% 20%; */
   .ctrl_btn {
     position: absolute;
     top: 0;
