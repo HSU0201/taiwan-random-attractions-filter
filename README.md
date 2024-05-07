@@ -6,3 +6,5 @@
 
 ## 功能：
 將收集到的景點數據隨機展示在網頁上。
+
+https://hsu0201.github.io/taiwan-random-attractions-filter/
